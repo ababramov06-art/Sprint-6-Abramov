@@ -44,3 +44,7 @@ class MainPage(BasePage):
     def check_redirect_to_order_page(self):
         return self.get_current_url() == Urls.ORDER_PAGE
     
+    @allure.step("Дзен новости")
+    def dzen_news_(self):
+        return self.wait_and_find_element(MainPageLocators.DZEN_NEWS)
+    

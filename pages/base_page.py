@@ -26,8 +26,8 @@ class BasePage:
 
     @allure.step('Поиск элемента')
     def wait_and_find_element(self, locator, timeout=10):
-        WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
-        return self.driver.find_element(*locator)
+        element = WebDriverWait(self.driver, timeout).until(EC.visibility_of_element_located(locator))
+        return element
 
     @allure.step('Скролл до элемента')
     def scroll_to_element(self, locator):

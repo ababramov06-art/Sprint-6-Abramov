@@ -64,4 +64,3 @@ class OrderPage(BasePage):
         self.set_rental_period(period)
         self.click_order_button()
         self.click_confirm_button()
-        
