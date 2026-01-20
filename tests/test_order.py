@@ -65,6 +65,6 @@ class TestOrder:
         page.open_page(Urls.ORDER_PAGE)
         page.click_to_yandex_logo()
         page.switch_to_window(1)
-        page.wait_and_find_element(MainPageLocators.DZEN_NEWS)
+        page.dzen_news_()
         assert page.get_current_url() == Urls.DZEN_URL
         
